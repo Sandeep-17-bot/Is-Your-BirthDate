@@ -43,6 +43,7 @@ h1 {
   padding-top: 3rem;
   /* padding-bottom: 3rem; */
   box-shadow: 8px 7px 7px #4a4848;
+  margin-bottom: 8rem;
 }
 .alert {
   border: 1px solid black;
