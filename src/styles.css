@@ -1,0 +1,109 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url(https://theawesomedaily.com/wp-content/uploads/2018/07/cool-background-1-1.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  padding-top: 11%;
+  padding-bottom: 1%;
+  background-size: cover;
+  padding-right: 1%;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section {
+  margin: auto;
+  max-width: 500px;
+  margin-top: 3rem;
+  margin-bottom: 12rem;
+  background-color: rgba(255, 255, 255, 0.397);
+  padding: 1rem 4rem 1rem 5rem;
+  box-shadow: 8px 7px 7px #4a4848;
+}
+h1 {
+  padding-left: 1rem;
+  font-size: 4rem;
+  padding-right: 2rem;
+  margin: auto;
+  max-width: 500px;
+  margin-top: 3rem;
+}
+.scroll {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  text-decoration: underline solid rgb(17, 17, 17);
+  cursor: pointer;
+}
+#main {
+  padding-top: 3rem;
+  /* padding-bottom: 3rem; */
+  box-shadow: 8px 7px 7px #4a4848;
+}
+.alert {
+  border: 1px solid black;
+  /* box-shadow: 1px 2px 3px red; */
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  background-color: white;
+  box-shadow: 8px 7px 7px #4a4848;
+}
+.notice {
+  font-weight: bold;
+}
+#closebtn {
+  float: right;
+  /* border: 1px solid black; */
+  margin-right: 1rem;
+  margin-right: 28px;
+  font-size: 1.4rem;
+}
+
+h2 {
+  margin: 2rem;
+  margin-bottom: 1.5rem;
+}
+.subheading {
+  margin: 0.5rem;
+  font-weight: bold;
+}
+#dats {
+  margin-bottom: 1rem;
+  width: 29%;
+  font-size: 1rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+#lucky {
+  margin-bottom: 1rem;
+  width: 29%;
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+#check {
+  display: block;
+  margin: auto;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+#result {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 2rem;
+  padding: 2rem;
+  width: 75%;
+}
