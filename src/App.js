@@ -4,8 +4,7 @@ import congrates from "./congrates.gif";
 import noluck from "./noluck.gif";
 
 export default function App() {
-  // const date = document.querySelector("#dats")
-  // const result = document.querySelector("#result");
+  
   const yourluckyimg = (
     <div>
       <img alt="yourlucky" src={congrates} />
@@ -18,32 +17,7 @@ export default function App() {
   );
 
   const [showresult, setresult] = useState(["", ""]);
-  function checkClickHandler() {
-    let inputValue = document.getElementById("dats").value;
-    // console.log("click")
 
-    var spl = inputValue.split("-").join("");
-    // console.log(spl)
-
-    var len = spl.length;
-    // console.log(len)
-    let sum = 0;
-
-    for (let i = 0; i < len; i++) {
-      sum += Number(spl[i]);
-      // console.log(sum)
-    }
-    var luckyno = document.getElementById("lucky").value;
-
-    if (sum % luckyno === 0) {
-      setresult(["WoW! Your lucky", yourluckyimg]);
-    } else {
-      setresult([
-        "Ok Ok Your Number is not lucky, but man Your Lucky",
-        yournotimg
-      ]);
-    }
-  }
   // function to close alert
   function closeHandler() {
     const close = document.getElementById("closebtn");
@@ -58,6 +32,35 @@ export default function App() {
     });
   }
 
+
+ function submitHandler(e){
+  e.preventDefault()
+ 
+ let inputValue = document.getElementById("dats").value;
+    
+ 
+     var spl = inputValue.split("-").join("");
+     
+ 
+     var len = spl.length;
+     
+     let sum = 0;
+ 
+     for (let i = 0; i < len; i++) {
+       sum += Number(spl[i]);
+       
+     }
+     var luckyno = document.getElementById("lucky").value;
+ 
+     if (sum % luckyno === 0) {
+       setresult(["WoW! Your lucky", yourluckyimg]);
+     } else {
+       setresult([
+         "Ok Ok Your Number is not lucky, but man Your Lucky",
+         yournotimg
+       ]);
+     }
+}
   return (
     <div className="App">
       {/* top section */}
@@ -81,22 +84,21 @@ export default function App() {
           <span class="notice">Privacy Notice!</span>We are not storing your
           data
         </div>
-
         <h2>Enter Your Birthdate and Lucky Number to continue...</h2>
 
         <div className="subheading">Select Your Birth Date:</div>
-        <input id="dats" type="date"></input>
+
+        
+        <form id="form" onSubmit={submitHandler}>
+        <input id="dats" type="date" required></input>
 
         <div className="subheading">Enter Your Lucky Number:</div>
-        <input id="lucky" type="number"></input>
+        <input id="lucky" type="number" required></input>
 
-        <button id="check" onClick={checkClickHandler} className="check">
-          check
-        </button>
-
+        < input type="submit" value="Check" className="check" id="check" />
         <div id="result">{showresult}</div>
+</form>
       </section>
     </div>
   );
 }
-// This is "Is your birthdate and your lucky no. matches or not"app
